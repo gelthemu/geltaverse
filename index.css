@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
+
+@font-face {
+  font-family: "MTN Brighter Sans Medium";
+  src: url("resources/fonts/MTN\ Brighter\ Sans\ Medium.woff2") format("woff2"),
+    url("resources/fonts/MTN\ Brighter\ Sans\ Medium.woff") format("woff");
+  font-weight: 400;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --mg-teal: #006274;
+  --mg-light-cyan: #05849b;
+  --mg-dark-cyan: #0a3b52;
+  --mg-primary: #141414;
+  --mg-complementary: #343333;
+  --mg-slate-gray: #737373;
+  --mg-dark-gray: #a6a6a6;
+  --mg-light: #fff;
+
+  --mg-font-family: "Work Sans", sans-serif;
+  --mg-secondary-font: "MTN Brighter Sans Medium", Verdana, sans-serif;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  color: var(--mg-light);
+  background: var(--mg-primary);
+  font-family: var(--mg-font-family);
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* main {
+  max-width: 1640px;
+  margin: 0 auto;
+} */
+
+h1,
+h2 {
+  font-family: var(--mg-secondary-font);
+}
+
+a {
+  color: var(--mg-dark-gray);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+hr {
+  margin: 5px;
+  border-bottom: 1px solid var(--mg-slate-gray);
+}
+
+input {
+  font-family: var(--mg-font-family);
+  color: var(--mg-light);
+  background: transparent;
+  text-align: left;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--mg-slate-gray);
+}
+
+input:focus,
+input:active {
+  outline: none;
+}
+
+button {
+  font-family: var(--mg-font-family);
+  color: var(--mg-light);
+  background: var(--mg-complementary);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+/* 
+ .content-wrapper {
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+}
+
+.content-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.content-wrapper::-webkit-scrollbar-thumb {
+  background: var(--text-color);
+} */
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

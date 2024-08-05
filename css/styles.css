@@ -1,0 +1,150 @@
+.navbar {
+  height: 15vh !important;
+  background: var(--mg-dark-cyan);
+  border-bottom: 1px solid var(--mg-slate-gray);
+}
+
+.nav-logo {
+  aspect-ratio: 108 / 65;
+}
+
+.menuBtn {
+  font-size: 20px;
+  background: transparent;
+}
+
+.menu {
+  background: var(--mg-complementary);
+}
+
+.menu-header {
+  background: var(--mg-primary);
+  border-bottom: 1px solid var(--mg-slate-gray);
+  height: 15vh;
+}
+
+.menu-title {
+  color: var(--mg-dark-gray);
+  font-size: 22px;
+}
+
+.closeBtn {
+  font-size: 18px;
+  color: var(--mg-slate-gray);
+  background: transparent;
+}
+
+.closeBtn:hover {
+  color: var(--mg-light);
+}
+
+.nav-link {
+  color: var(--mg-light);
+}
+
+.mg-nav-link {
+  border-top: 1px solid var(--mg-dark-gray);
+}
+
+.bold-nav-link {
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--mg-dark-gray);
+}
+
+.menu-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 1040;
+}
+
+.menu-backdrop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar-offset {
+  height: 15vh;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  background-image: url("../resources/gel-hero.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  aspect-ratio: 773 / 173;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  background: transparent;
+  border: 4px solid var(--mg-primary);
+}
+
+@media only screen and (max-width: 648px) {
+  .navbar,
+  .menu-header,
+  .navbar-offset {
+    height: 12vh !important;
+  }
+
+  .hero {
+    background-image: url("../resources/gel-hero-md.svg");
+    aspect-ratio: 32 / 13;
+  }
+}
+
+.site-footer {
+  width: 100%;
+}
+
+.top-footer-block {
+  padding: 10px !important;
+}
+
+.footer-tab {
+  background: var(--mg-teal);
+  color: var(--mg-light);
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.footer-block-links {
+  gap: 8px !important;
+}
+
+.footer-block-icon {
+  border: 2px solid var(--mg-dark-cyan);
+  border-radius: 6px;
+}
+
+.bottom-footer-block {
+  padding: 10px !important;
+  font-size: 14px;
+  color: var(--mg-dark-gray);
+}
+
+#scrollTop {
+  display: none;
+  background-color: var(--mg-complementary);
+  border-color: var(--mg-teal) !important;
+  color: var(--mg-light);
+  cursor: pointer;
+  z-index: 2000;
+}
