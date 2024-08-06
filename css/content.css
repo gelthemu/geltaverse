@@ -256,11 +256,11 @@
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
+  background: url("../resources/default.player.png") no-repeat center center / cover !important;
 }
 
-.video-container,
 .video-container .video-js {
-  background: var(--mg-primary);
+  background: transparent !important;
 }
 
 .playlist-item {
@@ -277,9 +277,13 @@
   border: 1px solid var(--mg-slate-gray);
 }
 
+#my-video {
+  display: none;
+}
+
 .video-js .vjs-big-play-button,
 .video-js:hover .vjs-big-play-button {
-  background: var(--mg-teal) !important;
+  background: linear-gradient(90deg, var(--mg-dark-cyan), var(--mg-teal), var(--mg-dark-cyan)) !important;
   border: none !important;
   border-radius: 0 !important;
   width: 50px;
@@ -292,4 +296,20 @@
 
 .video-js .vjs-control-bar {
   background-color: var(--mg-teal) !important;
+}
+
+.video-js .vjs-modal-dialog {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 98, 116, 1),
+    rgba(0, 98, 116, 0.25),
+    rgba(0, 98, 116, 0)
+  ) !important;
+}
+
+.video-js .vjs-error-display .vjs-modal-dialog-content {
+  color: var(--mg-light) !important;
+  font-family: var(--mg-font-family) !important;
+  font-size: 0.85rem !important;
+  line-height: 1 !important;
 }

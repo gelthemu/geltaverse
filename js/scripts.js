@@ -66,6 +66,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       item.classList.add("active");
 
+      document.getElementById('my-video').style.display = 'block';
+
       var videoSrc = item.getAttribute("data-src");
       var videoPoster = item.getAttribute("data-poster");
 
