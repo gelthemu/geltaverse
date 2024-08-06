@@ -49,73 +49,28 @@ document.addEventListener("DOMContentLoaded", (event) => {
 });
 
 // video player
-document.addEventListener("DOMContentLoaded", () => {
-  const videoPlayers = [
-    {
-      video: document.getElementById("video1"),
-      btn: document
-        .getElementById("video-player1")
-        .querySelector(".play-pause-btn"),
-    },
-    {
-      video: document.getElementById("video2"),
-      btn: document
-        .getElementById("video-player2")
-        .querySelector(".play-pause-btn"),
-    },
-    {
-      video: document.getElementById("video3"),
-      btn: document
-        .getElementById("video-player3")
-        .querySelector(".play-pause-btn"),
-    },
-    {
-      video: document.getElementById("video4"),
-      btn: document
-        .getElementById("video-player4")
-        .querySelector(".play-pause-btn"),
-    },
-  ];
+document.addEventListener("DOMContentLoaded", function () {
+  var player = videojs("my-video", {
+    autoplay: false,
+    preload: "none",
+    liveui: true,
+  });
 
-  let currentlyPlaying = null;
+  var playlistItems = document.querySelectorAll(".playlist-item");
 
-  videoPlayers.forEach((player) => {
-    if (Hls.isSupported()) {
-      const hls = new Hls();
-      hls.loadSource(player.video.querySelector("source").src);
-      hls.attachMedia(player.video);
-    } else if (player.video.canPlayType("application/vnd.apple.mpegURL")) {
-      player.video.src = player.video.querySelector("source").src;
-    }
+  playlistItems.forEach(function (item) {
+    item.addEventListener("click", function () {
+      playlistItems.forEach(function (i) {
+        i.classList.remove("active");
+      });
 
-    player.btn.addEventListener("click", () => {
-      if (player.video.paused) {
-        if (currentlyPlaying && currentlyPlaying !== player.video) {
-          currentlyPlaying.style.opacity = "0";
-          currentlyPlaying.pause();
-          currentlyPlaying
-            .closest(".video-player")
-            .querySelector(".play-pause-btn").innerHTML =
-            '<i class="fa-solid fa-play"></i>';
-        }
-        player.video.style.opacity = "1";
-        setTimeout(() => {
-          player.video.play();
-        }, 500);
-        player.btn.innerHTML = '<i class="fa-solid fa-pause"></i>';
-        currentlyPlaying = player.video;
-      } else {
-        player.video.style.opacity = "0";
-        player.video.pause();
-        player.btn.innerHTML = '<i class="fa-solid fa-play"></i>';
-        currentlyPlaying = null;
-      }
-    });
+      item.classList.add("active");
 
-    player.video.addEventListener("ended", () => {
-      player.video.style.opacity = "0";
-      player.btn.innerHTML = '<i class="fa-solid fa-play"></i>';
-      currentlyPlaying = null;
+      var videoSrc = item.getAttribute("data-src");
+      var videoPoster = item.getAttribute("data-poster");
+
+      player.src({ src: videoSrc, type: "application/x-mpegURL" });
+      player.poster(videoPoster);
     });
   });
 });

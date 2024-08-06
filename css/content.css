@@ -136,6 +136,7 @@
 .emphasized {
   font-weight: 600;
 }
+
 .blog-img {
   width: 100%;
   background: url("https://th.bing.com/th/id/R.f6f794c554d745a30eec76bba4006954?rik=hv7ODNGtWnH40g&pid=ImgRaw&r=0")
@@ -184,11 +185,11 @@
 }
 
 .project-1 {
-  background-image: url(../resources/croozefm.app.svg);
+  background-image: url(../resources/croozefm.app.png);
 }
 
 .project-2 {
-  background-image: url(../resources/field-therapist.app.svg);
+  background-image: url(../resources/field-therapist.app.png);
 }
 
 .project-caption {
@@ -230,27 +231,19 @@
 }
 
 .player1 {
-  background-image: url("../resources/croozefm.player.svg");
+  background-image: url("../resources/croozefm.player.png");
 }
 
 .player2 {
-  background-image: url("../resources/capitalradio.player.svg");
+  background-image: url("../resources/capitalradio.player.png");
 }
 
 .player3 {
-  background-image: url("../resources/foxnewsradio.player.svg");
+  background-image: url("../resources/foxnewsradio.player.png");
 }
 
 .player4 {
-  background-image: url("../resources/at40.player.svg");
-}
-
-.player5 {
-  background-image: url("");
-}
-
-.player6 {
-  background-image: url("");
+  background-image: url("../resources/at40.player.png");
 }
 
 .play-pause-btn,
@@ -259,54 +252,44 @@
   color: var(--mg-light) !important;
 }
 
-.video-player {
-  position: relative;
-  aspect-ratio: 16 / 9;
-}
-
-.video-controls {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  width: calc(100% - 2em);
-  margin: 0 0 1em 1em;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-}
-
 .video-container {
   position: relative;
   width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
   aspect-ratio: 16 / 9;
 }
 
-.video-container-1 {
-  background-image: url("../resources/foxnews.player.svg");
+.video-container,
+.video-container .video-js {
+  background: var(--mg-primary);
 }
 
-.video-container-2 {
-  background-image: url("../resources/cnn.player.svg");
+.playlist-item {
+  cursor: pointer;
+  border-bottom: 1px solid var(--mg-slate-gray);
 }
 
-.video-container-3 {
-  background-image: url("../resources/nflnetwork.player.svg");
+.playlist-item:hover {
+  background-color: var(--mg-complementary);
 }
 
-.video-container-4 {
-  background-image: url("../resources/vevo.player.svg");
+.playlist-item.active {
+  background: var(--mg-teal);
+  border: 1px solid var(--mg-slate-gray);
 }
 
-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.5s;
+.video-js .vjs-big-play-button,
+.video-js:hover .vjs-big-play-button {
+  background: var(--mg-teal) !important;
+  border: none !important;
+  border-radius: 0 !important;
+  width: 50px;
+  bottom: 15px !important;
+  left: 15px !important;
+  top: auto !important;
+  right: auto !important;
+  transform: translate(90%, 0%) !important;
+}
+
+.video-js .vjs-control-bar {
+  background-color: var(--mg-teal) !important;
 }

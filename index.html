@@ -19,6 +19,7 @@
     />
     <title>Geltaverse</title>
     <link type="text/css" rel="stylesheet" href="index.css" media="all" />
+    <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
     <link type="text/css" rel="stylesheet" href="css/styles.css" media="all" />
     <link type="text/css" rel="stylesheet" href="css/content.css" media="all" />
   </head>
@@ -188,87 +189,64 @@
                 </div>
               </div>
             </div>
-            <div class="container mt-4">
-              <h5>TV</h5>
+            <div class="container border-bottom p-4 mt-4">
+              <h5 class="pb-2">TV</h5>
               <div class="row">
-                <div class="container col-md-6 my-3">
-                  <div class="video-player video-player1" id="video-player1">
-                    <div class="video-container video-container-1">
-                      <video id="video1">
-                        <source
-                          src="https://fmradiohub.in/play?url=http://fl2.moveonjoy.com/FOX_News_Channel/index.m3u8"
-                          type="application/x-mpegURL"
-                        />
-                        ERROR (FOX News Channel)
-                      </video>
+                <div class="container col-md-4 pb-3">
+                  <div class="playlist">
+                    <div
+                      class="playlist-item p-md-3 p-2 active"
+                      data-src="https://fmradiohub.in/play?url=http://fl2.moveonjoy.com/FOX_News_Channel/index.m3u8"
+                      data-poster="resources/foxnews.player.png"
+                    >
+                      FOX News Channel
                     </div>
-                    <div class="video-controls">
-                      <button
-                        class="play-pause-btn border border-0 rounded-0 btn px-3 py-2"
-                      >
-                        <i class="fa-solid fa-play"></i>
-                      </button>
+                    <div
+                      class="playlist-item p-md-3 p-2"
+                      data-src="https://jmp2.uk/SamsungTVPlus/ATBD800001VA.m3u8"
+                      data-poster="resources/cnn.player.png"
+                    >
+                      CNN International
                     </div>
-                  </div>
-                </div>
-                <div class="container col-md-6 my-3">
-                  <div class="video-player video-player2" id="video-player2">
-                    <div class="video-container video-container-2">
-                      <video id="video2">
-                        <source
-                          src="https://jmp2.uk/SamsungTVPlus/ATBD800001VA.m3u8"
-                          type="application/x-mpegURL"
-                        />
-                        ERROR (CNN)
-                      </video>
+                    <div
+                      class="playlist-item p-md-3 p-2"
+                      data-src="https://jmp2.uk/SamsungTVPlus/GBBC2300001X5.m3u8"
+                      data-poster="resources/idol.player.png"
+                    >
+                      American Idol
                     </div>
-                    <div class="video-controls">
-                      <button
-                        class="play-pause-btn border border-0 rounded-0 btn px-3 py-2"
-                      >
-                        <i class="fa-solid fa-play"></i>
-                      </button>
+                    <div
+                      class="playlist-item p-md-3 p-2"
+                      data-src="https://jmp2.uk/SamsungTVPlus/GBBC2300002GG.m3u8"
+                      data-poster="resources/agt.player.png"
+                    >
+                      America's Got Talent
                     </div>
-                  </div>
-                </div>
-                <div class="container col-md-6 my-3">
-                  <div class="video-player video-player3" id="video-player3">
-                    <div class="video-container video-container-3">
-                      <video id="video3">
-                        <source
-                          src="javasript:void(0)"
-                          type="application/x-mpegURL"
-                        />
-                        ERROR (NFL Network)
-                      </video>
-                    </div>
-                    <div class="video-controls">
-                      <button
-                        class="play-pause-btn border border-0 rounded-0 btn px-3 py-2"
-                      >
-                        <i class="fa-solid fa-play"></i>
-                      </button>
+                    <div
+                      class="playlist-item p-md-3 p-2"
+                      data-src="https://jmp2.uk/SamsungTVPlus/CABC52000165E.m3u8"
+                      data-poster="resources/vevo.player.png"
+                    >
+                      Vevo Country Music
                     </div>
                   </div>
                 </div>
-                <div class="container col-md-6 my-3">
-                  <div class="video-player video-player4" id="video-player4">
-                    <div class="video-container video-container-4">
-                      <video id="video4">
-                        <source
-                          src="https://jmp2.uk/SamsungTVPlus/CABC52000165E.m3u8"
-                          type="application/x-mpegURL"
-                        />
-                        ERROR (Vevo Country)
-                      </video>
-                    </div>
-                    <div class="video-controls">
-                      <button
-                        class="play-pause-btn border border-0 rounded-0 btn px-3 py-2"
-                      >
-                        <i class="fa-solid fa-play"></i>
-                      </button>
-                    </div>
+                <div class="container col-md-8">
+                  <div class="video-container">
+                    <video
+                      id="my-video"
+                      class="video-js vjs-default-skin w-100 h-100"
+                      style="aspect-ratio: 16 / 9"
+                      controls
+                      preload="none"
+                      poster="resources/foxnews.player.png"
+                    >
+                      <source
+                        src="https://fmradiohub.in/play?url=http://fl2.moveonjoy.com/FOX_News_Channel/index.m3u8"
+                        type="application/x-mpegURL"
+                      />
+                      ERROR (Unable to load video)
+                    </video>
                   </div>
                 </div>
               </div>
@@ -645,7 +623,7 @@
       </div>
     </footer>
     <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
+    <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
     <script type="text/javascript" src="index.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
   </body>
