@@ -83,7 +83,7 @@
     </nav>
     <main class="container">
       <div class="container navbar-offset"></div>
-      <div class="hero mx-auto my-3">
+      <div class="hero mx-auto my-4">
         <div class="hero-overlay"></div>
       </div>
       <div class="main-content my-3 p-2">
@@ -104,128 +104,77 @@
         </div>
         <div class="content-container">
           <div class="content media-picks active" id="media-picks">
-            <div class="container">
-              <h5>Radio</h5>
-              <div class="row">
-                <div class="container col-md-6 my-3">
-                  <div class="media-player player1" id="player1">
-                    <audio id="media1" class="d-none">
-                      <source
-                        src="https://fmradiohub.in/play?url=http://mp.techsysug.com:21563/;stream"
-                        type="audio/mpeg"
-                      />
-                      ERROR (Crooze FM)
-                    </audio>
-                    <div
-                      class="media-controls position-absolute bottom-0 start-0 ms-3 mb-3"
-                    >
-                      <button
-                        class="play-pause-btn border border-0 rounded-0 btn px-3 py-2"
-                      >
-                        <i class="fa-solid fa-play"></i>
-                      </button>
-                    </div>
-                  </div>
+            <div class="container border-bottom p-5 pt-4">
+              <h5 class="pb-3" style="color: var(--mg-slate-gray)">Radio</h5>
+              <div class="playlist row">
+                <div
+                  class="playlist-item audiolist-item p-md-3 p-2 mb-2 col-custom"
+                  data-src="https://fmradiohub.in/play?url=http://mp.techsysug.com:21563/;stream"
+                >
+                  Crooze FM
                 </div>
-                <div class="container col-md-6 my-3">
-                  <div class="media-player player2" id="player2">
-                    <audio id="media2" class="d-none">
-                      <source
-                        src="https://capitalfm.cloudrad.io/stream/;"
-                        type="audio/mpeg"
-                      />
-                      ERROR (Capital Radio)
-                    </audio>
-                    <div
-                      class="media-controls position-absolute bottom-0 start-0 ms-3 mb-3"
-                    >
-                      <button
-                        class="play-pause-btn border border-0 rounded-0 btn px-3 py-2"
-                      >
-                        <i class="fa-solid fa-play"></i>
-                      </button>
-                    </div>
-                  </div>
+                <div
+                  class="playlist-item audiolist-item p-md-3 p-2 mb-2 col-custom"
+                  data-src="https://capitalfm.cloudrad.io/stream/;"
+                >
+                  Capital Radio
                 </div>
-                <div class="container col-md-6 my-3">
-                  <div class="media-player player3" id="player3">
-                    <audio id="media3" class="d-none">
-                      <source
-                        src="https://live.amperwave.net/direct/foxnewsradio-foxnewsradioaac-imc?source=fnr.web"
-                        type="audio/mpeg"
-                      />
-                      ERROR (FOX News Radio)
-                    </audio>
-                    <div
-                      class="media-controls position-absolute bottom-0 start-0 ms-3 mb-3"
-                    >
-                      <button
-                        class="play-pause-btn border border-0 rounded-0 btn px-3 py-2"
-                      >
-                        <i class="fa-solid fa-play"></i>
-                      </button>
-                    </div>
-                  </div>
+                <div
+                  class="playlist-item audiolist-item p-md-3 p-2 mb-2 col-custom"
+                  data-src="https://live.amperwave.net/direct/foxnewsradio-foxnewsradioaac-imc?source=fnr.web"
+                >
+                  FOX News Radio
                 </div>
-                <div class="container col-md-6 my-3">
-                  <div class="media-player player4" id="player4">
-                    <audio id="media4" class="d-none">
-                      <source
-                        src="https://stream.revma.ihrhls.com/zc4802"
-                        type="audio/mpeg"
-                      />
-                      ERROR (AT40)
-                    </audio>
-                    <div
-                      class="media-controls position-absolute bottom-0 start-0 ms-3 mb-3"
-                    >
-                      <button
-                        class="play-pause-btn border border-0 rounded-0 btn px-3 py-2"
-                      >
-                        <i class="fa-solid fa-play"></i>
-                      </button>
-                    </div>
-                  </div>
+                <div
+                  class="playlist-item audiolist-item p-md-3 p-2 mb-2 col-custom"
+                  data-src="https://stream.revma.ihrhls.com/zc4802"
+                >
+                  AT40 Radio
                 </div>
               </div>
+              <div class="audio-player row border">
+                <audio
+                  id="audio-player"
+                  controls
+                  controlslist="nofullscreen nodownload noremoteplayback noplaybackrate foobar"
+                  muted
+                >
+                  <source src="" type="audio/mpeg" />
+                </audio>
+              </div>
             </div>
-            <div class="container border-bottom p-4 mt-4">
-              <h5 class="pb-2">TV</h5>
+            <div class="container border-bottom p-5">
+              <h5 class="pb-3" style="color: var(--mg-slate-gray)">TV</h5>
               <div class="row">
                 <div class="container col-md-4 pb-3">
                   <div class="playlist">
                     <div
-                      class="playlist-item p-md-3 p-2"
+                      class="playlist-item videolist-item p-md-3 p-2"
                       data-src="http://fl2.moveonjoy.com/FOX_News_Channel/index.m3u8"
-                      data-poster="resources/foxnews.player.png"
                     >
                       FOX News Channel
                     </div>
                     <div
-                      class="playlist-item p-md-3 p-2"
+                      class="playlist-item videolist-item p-md-3 p-2"
                       data-src="https://jmp2.uk/SamsungTVPlus/ATBD800001VA.m3u8"
-                      data-poster="resources/cnn.player.png"
                     >
                       CNN International
                     </div>
                     <div
-                      class="playlist-item p-md-3 p-2"
+                      class="playlist-item videolist-item p-md-3 p-2"
                       data-src="https://jmp2.uk/SamsungTVPlus/GBBC2300001X5.m3u8"
-                      data-poster="resources/idol.player.png"
                     >
                       American Idol
                     </div>
                     <div
-                      class="playlist-item p-md-3 p-2"
+                      class="playlist-item videolist-item p-md-3 p-2"
                       data-src="https://jmp2.uk/SamsungTVPlus/GBBC2300002GG.m3u8"
-                      data-poster="resources/agt.player.png"
                     >
                       America's Got Talent
                     </div>
                     <div
-                      class="playlist-item p-md-3 p-2"
+                      class="playlist-item videolist-item p-md-3 p-2"
                       data-src="https://jmp2.uk/SamsungTVPlus/CABC52000165E.m3u8"
-                      data-poster="resources/vevo.player.png"
                     >
                       Vevo Country Music
                     </div>
@@ -239,20 +188,19 @@
                       style="aspect-ratio: 16 / 9"
                       controls
                       preload="none"
-                      poster=""
+                      poster="resources/default.player.png"
                     >
                       <source
                         src="http://fl2.moveonjoy.com/FOX_News_Channel/index.m3u8"
                         type="application/x-mpegURL"
                       />
-                      ERROR (Unable to load video)
                     </video>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="container mt-4">
-              <h5>Podcasts</h5>
+            <div class="container p-5">
+              <h5 class="pb-3" style="color: var(--mg-slate-gray)">Podcasts</h5>
               <div class="row">
                 <div class="container col-md-6 my-3">...</div>
               </div>

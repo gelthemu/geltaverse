@@ -220,59 +220,66 @@
   font-variant: small-caps;
   color: var(--mg-dark-gray) !important;
 }
-
-.media-player {
-  position: relative;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  aspect-ratio: 16 / 9;
+.audiolist-item {
+  background-color: var(--mg-complementary);
+  border-left: 1px solid var(--mg-slate-gray);
+  cursor: pointer;
 }
 
-.player1 {
-  background-image: url("../resources/croozefm.player.png");
+.audiolist-item:hover {
+  background: var(--mg-teal);
 }
 
-.player2 {
-  background-image: url("../resources/capitalradio.player.png");
+.audiolist-item.active {
+  background: var(--mg-teal);
 }
 
-.player3 {
-  background-image: url("../resources/foxnewsradio.player.png");
+.audio-player {
+  background: #f1f3f4;
 }
 
-.player4 {
-  background-image: url("../resources/at40.player.png");
+.col-custom {
+  flex: 0 0 100%;
+  max-width: 100%;
 }
 
-.play-pause-btn,
-.play-pause-btn:hover {
-  background: var(--mg-dark-cyan) !important;
-  color: var(--mg-light) !important;
+@media (min-width: 358px) {
+  .col-custom {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .col-custom {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
 }
 
 .video-container {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  background: url("../resources/default.player.png") no-repeat center center / cover !important;
+  background: url("../resources/default.player.png") no-repeat center center /
+    cover !important;
 }
 
 .video-container .video-js {
   background: transparent !important;
 }
 
-.playlist-item {
+.videolist-item {
   cursor: pointer;
   border-bottom: 1px solid var(--mg-slate-gray);
-}
-
-.playlist-item:hover {
   background-color: var(--mg-complementary);
 }
 
-.playlist-item.active {
+.videolist-item:hover {
+  background: var(--mg-teal);
+}
+
+.videolist-item.active {
   background: var(--mg-teal);
   border: 1px solid var(--mg-slate-gray);
 }
@@ -283,7 +290,12 @@
 
 .video-js .vjs-big-play-button,
 .video-js:hover .vjs-big-play-button {
-  background: linear-gradient(90deg, var(--mg-dark-cyan), var(--mg-teal), var(--mg-dark-cyan)) !important;
+  background: linear-gradient(
+    90deg,
+    var(--mg-dark-cyan),
+    var(--mg-teal),
+    var(--mg-dark-cyan)
+  ) !important;
   border: none !important;
   border-radius: 0 !important;
   width: 50px;

@@ -1,49 +1,21 @@
-// media players
-document.addEventListener("DOMContentLoaded", (event) => {
-  const mediaPlayers = [
-    {
-      media: document.getElementById("media1"),
-      btn: document.getElementById("player1").querySelector(".play-pause-btn"),
-    },
-    {
-      media: document.getElementById("media2"),
-      btn: document.getElementById("player2").querySelector(".play-pause-btn"),
-    },
-    {
-      media: document.getElementById("media3"),
-      btn: document.getElementById("player3").querySelector(".play-pause-btn"),
-    },
-    {
-      media: document.getElementById("media4"),
-      btn: document.getElementById("player4").querySelector(".play-pause-btn"),
-    },
-  ];
+// audio players
+document.addEventListener("DOMContentLoaded", function () {
+  const audiolistItems = document.querySelectorAll(".audiolist-item");
+  const audioPlayer = document.getElementById("audio-player");
+  const audioSource = audioPlayer.querySelector("source");
 
-  let currentlyPlaying = null;
+  audiolistItems.forEach((item) => {
+    item.addEventListener("click", function () {
+      audiolistItems.forEach(function (i) {
+        i.classList.remove("active");
+      });
 
-  mediaPlayers.forEach((player) => {
-    player.btn.addEventListener("click", () => {
-      if (player.media.paused) {
-        if (currentlyPlaying && currentlyPlaying !== player.media) {
-          currentlyPlaying.pause();
-          currentlyPlaying
-            .closest(".media-player")
-            .querySelector(".play-pause-btn").innerHTML =
-            '<i class="fa-solid fa-play"></i>';
-        }
-        player.media.play();
-        player.btn.innerHTML = '<i class="fa-solid fa-pause"></i>';
-        currentlyPlaying = player.media;
-      } else {
-        player.media.pause();
-        player.btn.innerHTML = '<i class="fa-solid fa-play"></i>';
-        currentlyPlaying = null;
-      }
-    });
+      item.classList.add("active");
 
-    player.media.addEventListener("ended", () => {
-      player.btn.innerHTML = '<i class="fa-solid fa-play"></i>';
-      currentlyPlaying = null;
+      const audioSrc = item.getAttribute("data-src");
+      audioSource.setAttribute("src", audioSrc);
+      audioPlayer.load();
+      audioPlayer.play();
     });
   });
 });
@@ -66,13 +38,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
       item.classList.add("active");
 
-      document.getElementById('my-video').style.display = 'block';
-
       var videoSrc = item.getAttribute("data-src");
-      var videoPoster = item.getAttribute("data-poster");
 
       player.src({ src: videoSrc, type: "application/x-mpegURL" });
-      player.poster(videoPoster);
+
+      document.getElementById("my-video").style.display = "block";
     });
   });
 });
