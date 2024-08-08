@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const miniAudioPlayer = document.getElementById("mini-audio-player");
   const miniAudioSource = miniAudioPlayer.querySelector("source");
   const miniPlayerEnabled = document.getElementById("mini-player-enabled");
+  const hero = document.getElementById("hero");
 
   let isMiniPlayerActive = false;
 
@@ -62,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
     miniAudioPlayer.pause();
     isMiniPlayerActive = false;
 
-    audioPlayer.scrollIntoView({ behavior: "smooth" });
+    hero.scrollIntoView({ behavior: "smooth" });
   });
 
   audiolistItems.forEach((item) => {
