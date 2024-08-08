@@ -109,6 +109,35 @@
   }
 }
 
+.main-content {
+  border: 1px solid var(--mg-slate-gray);
+}
+
+.nav-scroller {
+  background: var(--mg-complementary);
+}
+
+.filter-tab {
+  color: var(--mg-dark-gray) !important;
+  font-family: var(--mg-secondary-font) !important;
+  cursor: pointer;
+}
+
+.filter-tab:hover {
+  color: var(--mg-light) !important;
+}
+
+.filter-tab.active {
+  color: var(--mg-light-cyan) !important;
+}
+
+.content {
+  display: none;
+}
+.content.active {
+  display: block;
+}
+
 .site-footer {
   width: 100%;
 }
@@ -140,11 +169,15 @@
   color: var(--mg-dark-gray);
 }
 
-#scrollTop {
+.fixed-mg-Pos {
+  background: transparent;
+  z-index: 2500;
+}
+
+.scrollTop {
   display: none;
   background-color: var(--mg-complementary);
   border-color: var(--mg-teal) !important;
   color: var(--mg-light);
   cursor: pointer;
-  z-index: 2000;
 }

@@ -49,11 +49,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* main {
-  max-width: 1640px;
-  margin: 0 auto;
-} */
-
 h1,
 h2 {
   font-family: var(--mg-secondary-font);
@@ -96,21 +91,21 @@ button {
   transition: all 0.5s ease-in-out;
 }
 
-/*
- .content-wrapper {
-  -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: none;
+.col-custom {
+  flex: 0 0 100%;
+  max-width: 100%;
 }
 
-.content-wrapper::-webkit-scrollbar-track {
-  background: transparent;
+@media only screen and (min-width: 398px) {
+  .col-custom {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
 }
 
-.content-wrapper::-webkit-scrollbar-thumb {
-  background: var(--text-color);
-} */
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+@media only screen and (min-width: 998px) {
+  .col-custom {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
 }
