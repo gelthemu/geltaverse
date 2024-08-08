@@ -11,28 +11,11 @@
   border-color: var(--mg-teal) !important;
 }
 
-.mini-player audio {
-  width: 100%;
-}
-
-.close-mini-player {
-  top: 0.1em;
-  left: 0.1em;
-  width: calc(100% - 0.2em);
-  height: calc(100% - 0.2em);
-  background: rgba(0, 0, 0, 0.5);
-  display: none;
-}
-
-.mini-player:hover .close-mini-player {
-  display: flex;
-}
-
 .pip-exit-button {
-  background: rgba(0, 0, 0, 0.65);
   padding: 0.125em 0.2em;
   font-weight: 500;
   font-size: 1.25em;
+  color: #000000;
 }
 
 .playlist-item {
