@@ -23,11 +23,6 @@
   height: 15vh;
 }
 
-.menu-title {
-  color: var(--mg-dark-gray);
-  font-size: 22px;
-}
-
 .closeBtn {
   font-size: 18px;
   color: var(--mg-slate-gray);
@@ -78,12 +73,12 @@
 
 .hero {
   position: relative;
-  width: 100%;
-  background-image: url("../resources/gel-hero.svg");
+  width: 95%;
+  background-image: url("../resources/gel-hero.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  aspect-ratio: 773 / 173;
+  aspect-ratio: 51 / 19;
 }
 
 .hero-overlay {
@@ -102,11 +97,6 @@
   .navbar-offset {
     height: 12vh !important;
   }
-
-  .hero {
-    background-image: url("../resources/gel-hero-md.svg");
-    aspect-ratio: 32 / 13;
-  }
 }
 
 .main-content {
@@ -119,6 +109,7 @@
 
 .filter-tab {
   color: var(--mg-dark-gray) !important;
+  font-size: 1.05em !important;
   font-family: var(--mg-secondary-font) !important;
   cursor: pointer;
 }
@@ -152,6 +143,7 @@
   font-size: 14px;
   font-weight: 500;
   border-radius: 6px;
+  cursor: pointer;
 }
 
 .footer-block-links {
@@ -171,7 +163,7 @@
 
 .fixed-mg-Pos {
   background: transparent;
-  z-index: 2500;
+  z-index: 1000;
 }
 
 .scrollTop {

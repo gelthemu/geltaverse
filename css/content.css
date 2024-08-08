@@ -1,3 +1,49 @@
+.project {
+  position: relative;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  aspect-ratio: 9 / 8.5;
+}
+
+.project-1 {
+  background-image: url(../resources/croozefm.app.png);
+}
+
+.project-2 {
+  background-image: url(../resources/field-therapist.app.png);
+}
+
+.project-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to left,
+    rgba(10, 59, 82, 0.85),
+    rgba(0, 0, 0, 0.85)
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.project:hover .project-caption {
+  opacity: 1;
+}
+
+.project-caption h5 {
+  font-weight: 600;
+  color: var(--mg-light) !important;
+}
+
+.project-caption p {
+  font-variant: small-caps;
+  color: var(--mg-dark-gray) !important;
+}
+
 .carousel-item {
   position: relative;
   width: 100%;
@@ -32,14 +78,22 @@
   background-color: rgba(0, 0, 0, 0.65);
 }
 
+.carousel-caption h3,
+.carousel-caption p {
+  width: 95%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  margin: 0 auto;
+}
+
 .carousel-caption h3 {
   font-family: var(--mg-secondary-font);
-  font-weight: 600;
   color: var(--mg-light-cyan) !important;
 }
 
 .carousel-caption p {
-  font-size: 1.2rem;
   color: var(--mg-light) !important;
 }
 
@@ -144,50 +198,4 @@
 
 .other-post-caption small {
   color: var(--mg-slate-gray);
-}
-
-.project {
-  position: relative;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  aspect-ratio: 9 / 8.5;
-}
-
-.project-1 {
-  background-image: url(../resources/croozefm.app.png);
-}
-
-.project-2 {
-  background-image: url(../resources/field-therapist.app.png);
-}
-
-.project-caption {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to left,
-    rgba(10, 59, 82, 0.85),
-    rgba(0, 0, 0, 0.85)
-  );
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.project:hover .project-caption {
-  opacity: 1;
-}
-
-.project-caption h5 {
-  font-weight: 600;
-  color: var(--mg-light) !important;
-}
-
-.project-caption p {
-  font-variant: small-caps;
-  color: var(--mg-dark-gray) !important;
 }
