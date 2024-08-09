@@ -23,15 +23,10 @@
   height: 100%;
   background: linear-gradient(
     to left,
-    rgba(10, 59, 82, 0.85),
-    rgba(0, 0, 0, 0.85)
+    rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.65)
   );
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.project:hover .project-caption {
-  opacity: 1;
 }
 
 .project-caption h5 {
@@ -42,6 +37,17 @@
 .project-caption p {
   font-variant: small-caps;
   color: var(--mg-dark-gray) !important;
+}
+
+@media only screen and (min-width: 1040px) {
+  .project-caption {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .project:hover .project-caption {
+    opacity: 1;
+  }
 }
 
 .carousel-item {

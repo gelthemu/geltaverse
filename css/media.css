@@ -94,6 +94,31 @@
   line-height: 1 !important;
 }
 
+.pod {
+  position: relative;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  aspect-ratio: 235 / 218;
+}
+
+.pod-1 {
+  background-image: url(../resources/pods/shxtsngigs.pod.png);
+}
+
+.pod-2 {
+  background-image: url(../resources/pods/guypbenson.pod.png);
+}
+
+.pod-3 {
+  background-image: url(../resources/pods/smartless.pod.png);
+}
+
+.pod-4 {
+  background-image: url(../resources/pods/avaseat.pod.png);
+}
+
 @media only screen and (max-width: 1024px) {
   .audio-player audio {
     width: 92%;

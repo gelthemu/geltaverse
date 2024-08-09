@@ -99,10 +99,6 @@
   }
 }
 
-.main-content {
-  border: 1px solid var(--mg-slate-gray);
-}
-
 .nav-scroller {
   background: var(--mg-complementary);
 }
