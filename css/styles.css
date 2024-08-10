@@ -165,7 +165,11 @@
 .scrollTop {
   display: none;
   background-color: var(--mg-complementary);
-  border-color: var(--mg-teal) !important;
+  border-color: var(--mg-dark-cyan) !important;
   color: var(--mg-light);
   cursor: pointer;
+}
+
+.scrollTop:hover {
+  background-color: var(--mg-dark-cyan);
 }
