@@ -1,16 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
 
-@font-face {
-  font-family: "MTN Brighter Sans Medium";
-  src: url("resources/fonts/MTN\ Brighter\ Sans\ Medium.woff2") format("woff2"),
-    url("resources/fonts/MTN\ Brighter\ Sans\ Medium.woff") format("woff");
-  font-weight: 400;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-display: swap;
-}
-
 *,
 *::before,
 *::after {
@@ -30,7 +20,6 @@
   --mg-light: #fff;
 
   --mg-font-family: "Work Sans", sans-serif;
-  --mg-secondary-font: "MTN Brighter Sans Medium", Verdana, sans-serif;
 }
 
 html,
@@ -49,13 +38,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1,
-h2 {
-  font-family: var(--mg-secondary-font);
-}
-
 a {
-  color: var(--mg-dark-gray);
+  color: var(--mg-light);
   text-decoration: none;
   cursor: pointer;
 }
@@ -96,16 +80,9 @@ button {
   max-width: 100%;
 }
 
-@media only screen and (min-width: 398px) {
+@media only screen and (min-width: 486px) {
   .col-custom {
     flex: 0 0 50%;
     max-width: 50%;
-  }
-}
-
-@media only screen and (min-width: 998px) {
-  .col-custom {
-    flex: 0 0 25%;
-    max-width: 25%;
   }
 }

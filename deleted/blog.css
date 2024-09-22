@@ -1,0 +1,206 @@
+.mini-player {
+  display: none;
+  background-color: #f1f3f4;
+  border-color: var(--mg-teal) !important;
+}
+
+.mini-player.show {
+  display: flex;
+}
+
+.mini-player audio {
+  width: 100%;
+  transition: all 1s ease;
+}
+
+.pip-button {
+  display: none;
+  font-weight: 600;
+  font-size: 1.05em;
+  color: #000;
+}
+
+.pip-button.show {
+  display: inline-block;
+  transition: all 1s ease;
+}
+
+.playlist-item {
+  background-color: var(--mg-complementary);
+  border-left: 1px solid var(--mg-slate-gray);
+  cursor: pointer;
+}
+
+.playlist-item:hover {
+  background: var(--mg-teal);
+}
+
+.playlist-item.active {
+  background: var(--mg-teal);
+}
+
+.pod-2 {
+  background-image: url(../resources/shxtsngigs.pod.png);
+}
+
+.carousel-item {
+  position: relative;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  aspect-ratio: 12 / 7;
+}
+
+.carousel-item-1 {
+  background-image: url("https://pbs.twimg.com/media/GUJpjhUWcAEFwti?format=jpg&name=4096x4096");
+}
+
+.carousel-item-2 {
+  background-image: url("https://pbs.twimg.com/media/GN_F0zoWkAEWwAj?format=jpg&name=large");
+}
+
+.carousel-item-3 {
+  background-image: url("https://pbs.twimg.com/media/GSZsAQyWgAAFjJy?format=jpg&name=medium");
+}
+
+.carousel-item-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.carousel-caption h3,
+.carousel-caption p {
+  width: 95%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  margin: 0 auto;
+}
+
+.carousel-caption h3 {
+  font-family: var(--mg-secondary-font);
+  color: var(--mg-light-cyan) !important;
+}
+
+.carousel-caption p {
+  color: var(--mg-light) !important;
+}
+
+.carousel-caption .carousel-caption-link {
+  background: var(--mg-dark-gray);
+  color: var(--mg-dark-cyan);
+  font-weight: 500;
+}
+
+.carousel-caption .carousel-caption-link:hover {
+  background: var(--mg-complementary);
+  color: var(--mg-light);
+}
+
+@media only screen and (max-width: 1040px) {
+  .carousel-caption h3 {
+    font-size: 1.25em;
+  }
+}
+
+.featured-post .card-img {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  aspect-ratio: 2 / 1.25;
+}
+
+.featured-post-1 .card-img {
+  background-image: url("https://pbs.twimg.com/media/GTB0Mt7XgAALQwH?format=jpg&name=large");
+  background-position: top right;
+}
+
+.featured-post-2 .card-img {
+  background-image: url("https://cupofjo.com/wp-content/uploads/2024/07/IMG_3089-scaled.jpeg");
+}
+
+.featured-post-3 .card-img {
+  background-image: url("https://pbs.twimg.com/media/GQO6xX2bcAAkrrf?format=jpg&name=4096x4096");
+  background-position: top center;
+}
+
+.featured-post-4 .card-img {
+  background-image: url("https://pbs.twimg.com/media/GUJux5lWcAAEtCP?format=jpg&name=large");
+}
+
+.featured-post .card-body {
+  background-color: var(--mg-dark-gray);
+}
+
+.featured-post .card-title {
+  color: var(--mg-dark-cyan);
+  font-family: var(--mg-secondary-font);
+}
+
+.featured-post .card-link {
+  color: var(--mg-primary);
+  font-size: 0.9em;
+  text-decoration: underline;
+}
+
+.blog-post-meta {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.blog-post-meta a {
+  text-decoration: underline;
+}
+
+.emphasized {
+  font-weight: 600;
+}
+
+.blog-img {
+  width: 100%;
+  background: url("https://th.bing.com/th/id/R.f6f794c554d745a30eec76bba4006954?rik=hv7ODNGtWnH40g&pid=ImgRaw&r=0")
+    no-repeat center center / cover;
+  aspect-ratio: 3 / 1;
+}
+
+.btn-see-all {
+  background: var(--mg-dark-gray);
+  color: var(--mg-dark-cyan);
+  font-weight: 500;
+}
+
+.btn-see-all:hover {
+  background: var(--mg-complementary);
+}
+
+.other-posts h5 {
+  color: var(--mg-dark-gray);
+}
+
+.other-post {
+  border-top: 1px solid var(--mg-slate-gray);
+}
+
+.other-post-caption h6 {
+  color: var(--mg-light);
+}
+
+.other-post-caption h6 span {
+  color: var(--mg-dark-gray);
+  font-size: 0.875em;
+}
+
+.other-post-caption small {
+  color: var(--mg-slate-gray);
+}
