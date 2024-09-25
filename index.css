@@ -38,6 +38,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.light-text {
+  font-weight: 300;
+  color: var(--mg-dark-gray);
+}
+
 a {
   color: var(--mg-light);
   text-decoration: none;
@@ -46,7 +51,9 @@ a {
 
 hr {
   margin: 5px;
-  border-bottom: 1px solid var(--mg-slate-gray);
+  border: none;
+  border-bottom: 2px solid var(--mg-slate-gray) !important;
+  background: transparent !important;
 }
 
 input {
@@ -80,9 +87,9 @@ button {
   max-width: 100%;
 }
 
-@media only screen and (min-width: 486px) {
+/* @media only screen and (min-width: 486px) {
   .col-custom {
     flex: 0 0 50%;
     max-width: 50%;
   }
-}
+} */

@@ -23,10 +23,10 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(
-    to left,
+    to right,
+    rgba(0, 0, 0, 1),
     rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 1)
+    rgba(0, 0, 0, 0)
   );
 }
 
@@ -44,34 +44,136 @@
 .media-btn {
   width: max-content;
   color: var(--mg-light);
-  background: var(--mg-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
 
 .media-btn span {
-  color: var(--mg-dark-gray);
-  font-size: 0.8em;
+  font-size: 0.85em;
   font-weight: 500;
 }
 
-.media-btn:hover span {
-  color: var(--mg-light);
+.media-play-btn {
+  background: var(--mg-teal);
+}
+
+.media-exit-btn {
+  display: none;
+  border: 2px solid var(--mg-teal);
+}
+
+.media-exit-btn:hover {
+  background: var(--mg-complementary);
+}
+
+.media-exit-btn.show {
+  display: block;
+}
+
+.podcast-1,
+.podcast-2 {
+  cursor: pointer;
 }
 
 .pod {
+  position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
 }
 
+.pod-cover {
+  display: block;
+  width: 100%;
+}
+
+.pod-title {
+  color: var(--mg-slate-gray);
+  font-size: 0.75em;
+  font-weight: 500;
+}
+
+/* mini-player */
 .fixed-mg-Pos {
   background: transparent;
   z-index: 1000;
 }
 
+.mini-player {
+  display: none;
+  color: #000;
+  background-color: #f1f3f4;
+  border-color: var(--mg-teal) !important;
+}
+
+.mini-player.show {
+  display: flex;
+}
+
+.mini-player audio {
+  width: 100%;
+  transition: all 1s ease;
+}
+
+.playlist-btn,
+.playlist-collapse {
+  font-size: 0.95em;
+}
+
+.playlist {
+  display: none;
+  background: var(--mg-dark-cyan);
+  border-color: var(--mg-teal) !important;
+  border-radius: 10px 10px 0 0;
+}
+
+.playlist.show {
+  display: block;
+}
+
+.playlist-header,
+.playlist-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.playlist-item {
+  cursor: pointer;
+}
+
+.playlist-item:hover {
+  background: linear-gradient(
+    to left,
+    var(--mg-complementary),
+    var(--mg-dark-cyan)
+  );
+}
+
+.playlist-item.active,
+.playlist-item.active:hover {
+  background: linear-gradient(to left, var(--mg-teal), var(--mg-dark-cyan));
+}
+
+.playlist-play-btn {
+  display: none;
+  color: var(--mg-light);
+  font-size: 0.685em;
+}
+
+.playlist-item:hover .playlist-play-btn {
+  display: block;
+}
+
+.playlist-collapse:hover {
+  color: var(--mg-light);
+}
+
 .scrollTop {
   display: none;
-  background-color: var(--mg-complementary);
-  border-color: var(--mg-dark-cyan) !important;
+  background-color: var(--mg-primary);
+  border-color: var(--mg-teal) !important;
   color: var(--mg-light);
   cursor: pointer;
 }

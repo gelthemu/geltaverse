@@ -56,12 +56,8 @@
 }
 
 /* hero */
-.hero h1 {
-  font-weight: 200;
-}
-
 .hero h1 span {
-  font-weight: 350;
+  font-weight: 400;
   color: var(--mg-light-cyan);
 }
 
@@ -83,10 +79,6 @@
 }
 
 /* connect */
-.connect h2 {
-  font-weight: 200;
-}
-
 .connect-link {
   color: var(--mg-dark-gray);
   border-bottom: 1px solid var(--mg-dark-gray);
