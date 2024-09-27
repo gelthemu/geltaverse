@@ -151,7 +151,7 @@
         <hr />
 
         <div class="media-picks my-5 p-2">
-         <div class="container">
+          <div class="container">
             <div>
               <h1 class="light-text">Media Picks</h1>
               <p class="pt-3">
@@ -216,6 +216,7 @@
         </div>
 
         <hr />
+        <div class="container mt-5 pt-4"><p class="text-center" style="color: var(--mg-slate-gray)">Half-Seminarian • Digital 180° et al</p></div>
       </div>
     </main>
 
@@ -225,19 +226,13 @@
       >
         <div class="mini-player w-100 border border-2">
           <div class="mini-player-header px-4 pt-3">
-            <div class="audio-title">
-              AT40 <span></span> Rerun
-            </div>
+            <div class="audio-title">AT40 <span></span> Rerun</div>
             <div type="button" class="media-exit">
               <i class="fa-solid fa-xmark"></i>
             </div>
           </div>
-          <audio
-            id="audio-player"
-            controls muted
-            controlslist="nofullscreen nodownload noremoteplayback noplaybackrate foobar"
-          >
-            <source src="" type="audio/mpeg" />
+          <audio id="audio-player" name="media" controls muted>
+            <source src="" type="audio/aac" />
           </audio>
         </div>
         <div
@@ -248,8 +243,6 @@
         </div>
       </div>
     </section>
-
-    <!-- <iframe width="100%" height="500px" src="resources/deleted/blog.html" frameborder="0"></iframe> -->
 
     <footer class="w-100 my-5" role="contentinfo">
       <div class="container">

@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       audioTitle.innerHTML = `Week 38`;
       miniPlayerHeader.classList.add("show");
-    }, 5000);
+    }, 8000);
 
     mediaBtn.classList.add("disabled");
   });
