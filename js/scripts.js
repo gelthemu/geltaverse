@@ -1,29 +1,17 @@
 // audio players
 document.addEventListener("DOMContentLoaded", () => {
-  const mediaPlayBtn = document.getElementById("media-play-btn");
-  const mediaExitBtn = document.getElementById("media-exit-btn");
+  const mediaBtn = document.getElementById("media-btn");
+  const mediaExit = document.querySelector(".media-exit");
+  const miniPlayer = document.querySelector(".mini-player");
+  const miniPlayerHeader = document.querySelector(".mini-player-header");
 
-  const playlist = document.getElementById("playlist");
-  const playlistCollapse = document.getElementById("playlist-collapse");
-  const playlistItems = document.querySelectorAll(".playlist-item");
-
-  const miniPlayer = document.getElementById("mini-player");
-  const playlistBtn = document.getElementById("playlist-btn");
   const audioPlayer = document.getElementById("audio-player");
   const audioSource = audioPlayer.querySelector("source");
+  const audioTitle = document.querySelector(".audio-title span");
 
-  const mediaPlayIcon = document.getElementById("media-play-icon");
-  const mediaPlayDisplay = document.getElementById("media-play-display");
-
-  const togglePlaylist = () => playlist.classList.toggle("show");
-  const hidePlaylist = () => {
-    if (playlist.classList.contains("show")) {
-      playlist.classList.remove("show");
-    }
-  };
   const playAudio = () => {
     audioPlayer.autoplay = true;
-    audioPlayer.volume = 0.5;
+    audioPlayer.volume = 0.25;
     audioPlayer.load();
     audioPlayer.play();
   };
@@ -35,65 +23,26 @@ document.addEventListener("DOMContentLoaded", () => {
     audioPlayer.pause();
   };
 
-  mediaPlayBtn.addEventListener("click", () => {
-    if (!miniPlayer.classList.contains("show")) {
-      mediaExitBtn.classList.add("show");
-      mediaPlayIcon.classList.remove("fa-play");
-      mediaPlayIcon.classList.add("fa-pause");
-      mediaPlayDisplay.innerHTML = `On-Air: ${"Crooze FM Mbarara"}`;
-      miniPlayer.classList.add("show");
-      playlistItems[0].classList.add("active");
-      playAudio();
-    } else {
-      mediaExitBtn.classList.remove("show");
-      mediaPlayIcon.classList.remove("fa-pause");
-      mediaPlayIcon.classList.add("fa-play");
-      mediaPlayDisplay.innerHTML = "Click to play";
-      miniPlayer.classList.remove("show");
-      playlistItems.forEach((i) => i.classList.remove("active"));
-      pauseAudio();
-    }
+  mediaBtn.addEventListener("click", () => {
+    miniPlayer.classList.add("show");
+    audioSource.setAttribute("src", "https://bit.ly/3Zx9nwD");
+    playAudio();
+
+    setTimeout(() => {
+      audioTitle.innerHTML = `Week 38`;
+      miniPlayerHeader.classList.add("show");
+    }, 5000);
+
+    mediaBtn.classList.add("disabled");
   });
 
-  mediaExitBtn.addEventListener("click", () => {
-    mediaExitBtn.classList.remove("show");
-    mediaPlayIcon.classList.remove("fa-pause");
-    mediaPlayIcon.classList.add("fa-play");
-    mediaPlayDisplay.innerHTML = "Click to play";
+  mediaExit.addEventListener("click", () => {
     miniPlayer.classList.remove("show");
-    playlistItems.forEach((i) => i.classList.remove("active"));
+    audioSource.setAttribute("src", "");
+    miniPlayerHeader.classList.remove("show");
+    audioTitle.innerHTML = ``;
     pauseAudio();
-  });
 
-  playlistBtn.addEventListener("click", () => {
-    togglePlaylist();
-  });
-
-  playlistCollapse.addEventListener("click", () => {
-    hidePlaylist();
-  });
-
-  document.addEventListener("click", (e) => {
-    if (!playlist.contains(e.target) && !playlistBtn.contains(e.target)) {
-      hidePlaylist();
-    }
-  });
-
-  playlistItems.forEach((item) => {
-    item.addEventListener("click", () => {
-      playlistItems.forEach((i) => i.classList.remove("active"));
-      item.classList.add("active");
-
-      const audioSrc = item.getAttribute("data-src");
-      const audioTitle = item.getAttribute("data-title");
-      audioSource.setAttribute("src", audioSrc);
-      playAudio();
-
-      mediaPlayDisplay.innerHTML = `On-Air: ${audioTitle}`;
-
-      setTimeout(() => {
-        hidePlaylist();
-      }, 5000);
-    });
+    mediaBtn.classList.remove("disabled");
   });
 });

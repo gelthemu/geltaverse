@@ -1,6 +1,6 @@
 // on-scroll
 document.addEventListener("DOMContentLoaded", function () {
-  const scrollTop = document.getElementById("scrollTop");
+  const scrollTop = document.querySelector(".scrollTop");
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > 400) {

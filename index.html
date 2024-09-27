@@ -150,64 +150,41 @@
 
         <hr />
 
-        <div class="media-picks py-5 px-md-5">
-          <div class="container">
-            <div class="media-picks-description">
+        <div class="media-picks my-5 p-2">
+         <div class="container">
+            <div>
               <h1 class="light-text">Media Picks</h1>
               <p class="pt-3">
-                Hey, since you’re here, why not listen to some radio? I’ve
-                curated a playlist of my favorite radio stations for you to
-                check out.
+                Hey, since you’re here, why not tune in to
+                <span>AT40</span> with <span>Ryan Seacrest</span>? Every week
+                from Hollywood, Ryan counts down from <span>#40</span>
+                to the biggest song in America.
               </p>
-            </div>
-            <div class="me-4 my-4">
-              <div class="container">
-                <div class="row column-gap-3">
-                  <div
-                    id="media-play-btn"
-                    class="media-btn media-play-btn px-3 py-3"
-                  >
-                    <i id="media-play-icon" class="fa-solid fa-play me-2"></i
-                    ><span id="media-play-display">Click to play</span>
-                  </div>
-                  <div
-                    id="media-exit-btn"
-                    class="media-btn media-exit-btn px-3 py-2"
-                  >
-                    <span>Exit</span>
-                  </div>
-                </div>
+              <div id="media-btn" class="media-btn btn px-3 py-2" type="button">
+                Click to play
               </div>
             </div>
-            <div class="podcasts">
+            <div class="podcasts mt-4">
               <p>Or catchup with the latest episode of:</p>
               <div class="container">
                 <div class="row row-gap-3">
-                  <div class="podcast-1 col-md-6">
-                    <small class="pod-title"
-                      ><span><i class="fa-solid fa-microphone-lines"></i></span>
-                      Shxts N Gigs</small
-                    >
-                    <div class="pod mt-1">
-                      <div class="pod-cover" title="Play">
-                        <img
-                          src="resources/shxtsngigs.pod.png"
-                          width="100%"
-                          alt="ShxtsNGigs Podcast Cover"
-                        />
-                      </div>
+                  <div class="podcast-1 col-md-6" title="Play">
+                    <small class="pod-title"> Shxts N Gigs</small>
+                    <div class="mt-1">
+                      <img
+                        class="pod-cover"
+                        src="resources/shxtsngigs.pod.png"
+                        alt="ShxtsNGigs Podcast Cover"
+                      />
                     </div>
                   </div>
-                  <div class="podcast-2 col-md-6">
-                    <small class="pod-title"
-                      ><span><i class="fa-solid fa-microphone-lines"></i></span>
-                      Guy Benson Show</small
-                    >
-                    <div class="pod mt-1">
-                      <div class="pod-cover" title="Play">
+                  <div class="podcast-2 col-md-6" title="Play">
+                    <small class="pod-title"> Guy Benson Show</small>
+                    <div class="mt-1">
+                      <div>
                         <img
+                          class="pod-cover"
                           src="resources/guybenson.pod.png"
-                          width="100%"
                           alt="Guy Benson Show Cover"
                         />
                       </div>
@@ -242,97 +219,37 @@
       </div>
     </main>
 
-    <section
-      class="fixed-mg-Pos position-fixed bottom-0 end-0 me-2 mb-2"
-      style="width: 280px"
-    >
+    <section class="media-player me-2 mb-2" style="width: 280px">
       <div
         class="d-flex flex-column justify-content-center align-items-end gap-1"
       >
-        <div id="playlist" class="playlist w-100 border border-2 p-3">
-          <div class="playlist-header pe-3">
-            <span class="playlist-header-title">
-              <h4 class="light-text">Radio</h4>
-            </span>
-            <span
-              id="playlist-collapse"
-              type="button"
-              class="playlist-collapse light-text"
-              title="Collapse"
-            >
-              <i class="fa-solid fa-chevron-down"></i>
-            </span>
+        <div class="mini-player w-100 border border-2">
+          <div class="mini-player-header px-4 pt-3">
+            <div class="audio-title">
+              AT40 <span></span> Rerun
+            </div>
+            <div type="button" class="media-exit">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
           </div>
-          <div
-            class="playlist-item pe-3 py-2"
-            data-src="https://bit.ly/47Gt5YB"
-            data-title="Crooze FM Mbarara"
-          >
-            <span class="radio-title">Crooze FM Mbarara</span>
-            <span class="playlist-play-btn" title="Play">
-              <i class="fa-solid fa-play"></i>
-            </span>
-          </div>
-          <hr class="m-0" />
-          <div
-            class="playlist-item pe-3 py-2"
-            data-src="https://bit.ly/4def6e1"
-          >
-            <span>Capital FM Uganda</span
-            ><span class="playlist-play-btn" title="Play">
-              <i class="fa-solid fa-play"></i>
-            </span>
-          </div>
-          <hr class="m-0" />
-          <div
-            class="playlist-item pe-3 py-2"
-            data-src="https://bit.ly/3zzH85N"
-          >
-            <span>FOX News Radio</span>
-            <span class="playlist-play-btn" title="Play">
-              <i class="fa-solid fa-play"></i>
-            </span>
-          </div>
-          <hr class="m-0" />
-          <div
-            class="playlist-item pe-3 py-2"
-            data-src="https://bit.ly/3Zx9nwD"
-          >
-            <span>AT40 Weekly Rerun</span>
-            <span class="playlist-play-btn" title="Play">
-              <i class="fa-solid fa-play"></i>
-            </span>
-          </div>
-        </div>
-        <div
-          id="mini-player"
-          class="mini-player w-100 align-items-center border border-2"
-        >
-          <span
-            id="playlist-btn"
-            type="button"
-            class="playlist-btn ms-3"
-            title="Playlist"
-          >
-            <i class="fa-solid fa-list"></i>
-          </span>
           <audio
             id="audio-player"
-            controls
+            controls muted
             controlslist="nofullscreen nodownload noremoteplayback noplaybackrate foobar"
           >
-            <source src="https://bit.ly/47Gt5YB" type="audio/mpeg" />
+            <source src="" type="audio/mpeg" />
           </audio>
         </div>
         <div
-          id="scrollTop"
-          class="scrollTop justify-content-center align-items-center p-2 border border-2"
-          style="width: 30px; height: 28px"
+          class="scrollTop border border-2"
+          style="width: 26px; height: 24px"
         >
           <i class="fa-solid fa-chevron-up"></i>
         </div>
       </div>
     </section>
+
+    <!-- <iframe width="100%" height="500px" src="resources/deleted/blog.html" frameborder="0"></iframe> -->
 
     <footer class="w-100 my-5" role="contentinfo">
       <div class="container">
