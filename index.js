@@ -35,3 +35,27 @@ document.addEventListener("DOMContentLoaded", () => {
     menuBackdrop.classList.remove("show");
   });
 });
+
+// demo-modal
+document.addEventListener("DOMContentLoaded", () => {
+  const demoBtns = document.getElementsByClassName("demo-btn");
+  const demoModal = document.getElementById("demo-modal");
+  const demoIframe = document.getElementById("demo-iframe");
+  const demoClose = document.querySelector(".demo-close");
+
+  const demoURLs = ["https://bit.ly/4dAyORx", "https://bit.ly/3WSfgmd"];
+  const demoTitles = ["CroozeFM.app", "FieldTherapist.app"];
+
+  for (let i = 0; i < demoBtns.length; i++) {
+    demoBtns[i].addEventListener("click", function () {
+      demoIframe.setAttribute("src", demoURLs[i]);
+      document.querySelector(".demo-title").innerHTML = demoTitles[i];
+      demoModal.style.display = "block";
+    });
+  }
+
+  demoClose.addEventListener("click", () => {
+    demoIframe.setAttribute("src", "");
+    demoModal.style.display = "none";
+  });
+});

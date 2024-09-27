@@ -113,36 +113,30 @@
           <div class="container">
             <div class="row">
               <div class="col-md-6 my-3">
-                <a
-                  href="https://bit.ly/4dAyORx"
-                  target="_blank"
-                  class="d-block w-100"
-                >
-                  <div class="border project project-1">
-                    <div
-                      class="d-flex flex-column justify-content-center ps-3 project-caption"
-                    >
-                      <h5>CROOZE FM</h5>
-                      <p>Test Web App</p>
-                    </div>
+                <div class="border project project-1 w-100">
+                  <div
+                    class="d-flex flex-column justify-content-center ps-3 project-caption"
+                  >
+                    <h5>CROOZE FM</h5>
+                    <p>Test Web App</p>
                   </div>
-                </a>
+                </div>
+                <div class="demo-btn mt-3 px-3 py-2" type="button">
+                  View demo
+                </div>
               </div>
               <div class="col-md-6 my-3">
-                <a
-                  href="https://bit.ly/3WSfgmd"
-                  target="_blank"
-                  class="d-block w-100"
-                >
-                  <div class="border project project-2">
-                    <div
-                      class="d-flex flex-column justify-content-center ps-3 project-caption"
-                    >
-                      <h5>FIELD THERAPIST</h5>
-                      <p>Test Web App</p>
-                    </div>
+                <div class="border project project-2 w-100">
+                  <div
+                    class="d-flex flex-column justify-content-center ps-3 project-caption"
+                  >
+                    <h5>FIELD THERAPIST</h5>
+                    <p>Test Web App</p>
                   </div>
-                </a>
+                </div>
+                <div class="demo-btn mt-3 px-3 py-2" type="button">
+                  View demo
+                </div>
               </div>
             </div>
           </div>
@@ -216,9 +210,36 @@
         </div>
 
         <hr />
-        <div class="container mt-5 pt-4"><p class="text-center" style="color: var(--mg-slate-gray)">Half-Seminarian • Digital 180° et al</p></div>
+        <div class="container mt-5 pt-4">
+          <p class="text-center" style="color: var(--mg-slate-gray)">
+            Half-Seminarian • Digital 180° et al
+          </p>
+        </div>
       </div>
     </main>
+
+    <section
+      id="demo-modal"
+      class="demo-modal position-fixed w-100 h-100 top-0 start-0"
+    >
+      <div class="demo-content mx-auto p-0">
+        <div class="demo-header px-4 py-3">
+          <span class="demo-title light-text"></span
+          ><span type="button" class="demo-close"
+            ><i class="fa-solid fa-xmark"></i
+          ></span>
+        </div>
+        <div class="demo-details border border-4 border-top-0">
+          <iframe
+            id="demo-iframe"
+            class="demo-iframe"
+            src=""
+            frameborder="0"
+            allow="encrypted-media"
+          ></iframe>
+        </div>
+      </div>
+    </section>
 
     <section class="media-player me-2 mb-2" style="width: 280px">
       <div
@@ -260,7 +281,10 @@
           <div
             class="d-flex flex-wrap justify-content-between align-items-center"
           >
-            <div class="footer-tab d-flex align-items-center px-3 py-1">
+            <div
+              class="footer-tab d-flex align-items-center px-3 py-1"
+              type="button"
+            >
               <a href="javascript:void(0)">Blog</a>
             </div>
             <div class="d-flex justify-content-end gap-2">
