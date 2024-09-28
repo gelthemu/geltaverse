@@ -61,7 +61,7 @@
   margin-top: 15vh;
   height: calc(100% - 30vh);
   width: 90%;
-  max-width: 900px;
+  max-width: 980px;
 }
 
 @media only screen and (max-width: 648px) {
@@ -117,7 +117,18 @@
 
 .pod-cover {
   width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   aspect-ratio: 16 / 9;
+}
+
+.pod-cover-1 {
+  background-image: url(../resources/shxtsngigs.pod.png);
+}
+
+.pod-cover-2 {
+  background-image: url(../resources/guybenson.pod.png);
 }
 
 .pod-title {

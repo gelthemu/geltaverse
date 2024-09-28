@@ -27,15 +27,14 @@
   </head>
 
   <body>
-    <nav class="navbar fixed-top px-5">
+    <nav class="navbar d-flex fixed-top px-5 py-0">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html"
           ><img
             src="logo.svg"
-            class="nav-logo"
             alt="Logo"
-            width="100"
-            style="aspect-ratio: 108 / 65"
+            width="50"
+            style="aspect-ratio: 5 / 3"
         /></a>
         <button class="menuBtn" type="button" id="menuBtn">
           <i class="fa-solid fa-bars"></i>
@@ -51,7 +50,7 @@
               src="resources/mg_light.png"
               class="nav-logo"
               alt="Logo"
-              width="120px"
+              width="118px"
               style="aspect-ratio: 413 / 125"
             />
           </div>
@@ -164,24 +163,19 @@
                 <div class="row row-gap-3">
                   <div class="podcast-1 col-md-6" title="Play">
                     <small class="pod-title"> Shxts N Gigs</small>
-                    <div class="mt-1">
-                      <img
-                        class="pod-cover"
-                        src="resources/shxtsngigs.pod.png"
-                        alt="ShxtsNGigs Podcast Cover"
-                      />
+                    <div class="pod-cover pod-cover-1 mt-1">
+                      <!-- ShxtsnGigs is a top 5 Spotify podcast hosted by best
+                        friends James and Fuhad. Expect unfiltered, sometimes
+                        edgy humor, but it’s always guaranteed to be hilarious! -->
                     </div>
                   </div>
                   <div class="podcast-2 col-md-6" title="Play">
                     <small class="pod-title"> Guy Benson Show</small>
-                    <div class="mt-1">
-                      <div>
-                        <img
-                          class="pod-cover"
-                          src="resources/guybenson.pod.png"
-                          alt="Guy Benson Show Cover"
-                        />
-                      </div>
+                    <div class="pod-cover pod-cover-2 mt-1">
+                      <!-- Every ‘homestretch’ segment from the Guy Benson Show,
+                        where listeners are provided with sharp, fast-paced
+                        political and cultural commentary from a right-leaning
+                        perspective. -->
                     </div>
                   </div>
                 </div>
@@ -252,7 +246,7 @@
               <i class="fa-solid fa-xmark"></i>
             </div>
           </div>
-          <audio id="audio-player" name="media" controls muted>
+          <audio id="audio-player" name="media" control>
             <source src="" type="audio/aac" />
           </audio>
         </div>

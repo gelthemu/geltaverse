@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const demoIframe = document.getElementById("demo-iframe");
   const demoClose = document.querySelector(".demo-close");
 
-  const demoURLs = ["https://bit.ly/4dAyORx", "https://bit.ly/3WSfgmd"];
+  const demoURLs = ["https://geltaverse.vercel.app", "https://bit.ly/3WSfgmd"];
   const demoTitles = ["CroozeFM.app", "FieldTherapist.app"];
 
   for (let i = 0; i < demoBtns.length; i++) {
