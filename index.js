@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuClose = document.getElementById("menuClose");
   const menu = document.getElementById("menu");
   const menuBackdrop = document.getElementById("menu-backdrop");
+  const navLinks = document.querySelectorAll(".nav-link");
 
   menuBtn.addEventListener("click", () => {
     menu.classList.add("show");
@@ -34,6 +35,14 @@ document.addEventListener("DOMContentLoaded", () => {
     menu.classList.remove("show");
     menuBackdrop.classList.remove("show");
   });
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      menu.classList.remove("show");
+      menuBackdrop.classList.remove("show");
+    });
+  });
 });
 
 // demo-modal
@@ -43,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const demoIframe = document.getElementById("demo-iframe");
   const demoClose = document.querySelector(".demo-close");
 
-  const demoURLs = ["https://geltaverse.vercel.app", "https://bit.ly/3WSfgmd"];
+  const demoURLs = ["https://bit.ly/4dAyORx", "https://bit.ly/3WSfgmd"];
   const demoTitles = ["CroozeFM.app", "FieldTherapist.app"];
 
   for (let i = 0; i < demoBtns.length; i++) {
@@ -57,5 +66,22 @@ document.addEventListener("DOMContentLoaded", () => {
   demoClose.addEventListener("click", () => {
     demoIframe.setAttribute("src", "");
     demoModal.style.display = "none";
+  });
+});
+
+// blog-modal
+document.addEventListener("DOMContentLoaded", () => {
+  const blogBtns = document.querySelectorAll(".blog-btn");
+  const blogModal = document.getElementById("blog-modal");
+  const blogClose = document.querySelector(".blog-close");
+
+  blogBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      blogModal.style.display = "block";
+    });
+  });
+
+  blogClose.addEventListener("click", () => {
+    blogModal.style.display = "none";
   });
 });

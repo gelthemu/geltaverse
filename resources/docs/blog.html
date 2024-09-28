@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta itemprop="name" content="Geltaverse" />
+    <meta itemprop="url" content="https://www.geltaverse.com/" />
+    <meta
+      name="description"
+      content="Gelthem Mucunguzi - Half-Seminarian • Digital 180°"
+    />
+
+    <link rel="icon" type="image/svg+xml" href="../../PB-MGMG9797-0002.png" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../../css/bootstrap.min.css"
+      media="all"
+    />
+
+    <title>Gel. — Blog</title>
+
+    <link rel="stylesheet" href="../../index.css" />
+
+    <style>
+      .blog-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--mg-dark-cyan);
+      }
+
+      .blog-img {
+        width: 100%;
+        background: url("../../resources/blog.placeholder.png") no-repeat center
+          center / cover;
+        aspect-ratio: auto 16 / 9;
+      }
+
+      .btn-see-all {
+        background: var(--mg-teal) !important;
+        color: var(--mg-dark-gray) !important;
+        font-weight: 500;
+      }
+
+      .btn-see-all:hover {
+        background: var(--mg-complementary) !important;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="w-100 h-100">
+      <div class="text-center p-4">
+        <h1 class="fs-1" style="color: var(--mg-teal)">Blog</h1>
+      </div>
+      <hr class="mx-md-4" />
+      <div class="container my-5">
+        <article>
+          <h2 class="bold-text mb-1">I Call It Geltaverse</h2>
+          <p class="light-text">
+            By
+            <a
+              href="https://bit.ly/gel_x"
+              target="_blank"
+              data-bs-toggle="popover"
+              data-bs-placement="bottom"
+              data-bs-trigger="hover"
+              data-bs-content="Gel"
+              data-bs-custom-class="custom-popover"
+              >Gel M.</a
+            >
+          </p>
+          <p class="pt-4">
+            Welcome to <span class="bold-text">Geltaverse</span> — my personal
+            corner of the web. It is not a cryptic place on Mars incidentally.
+            Geltaverse is more than just a website; it’s
+            <span class="bold-text">My Home on the Web</span>.
+          </p>
+          <p class="pt-4">
+            In addition to this weblog about the things that bring me joy every
+            day, I hope to start writing and sharing stuff as soon as this site
+            goes live. At least I hope so.
+          </p>
+          <div class="blog-img my-5"></div>
+          <p>
+            Every now and then, I hope to share designs and codes, whether from
+            personal experiments or school projects. Even if things don’t go as
+            planned, I’ll be building valuable skills along the way that will
+            help a lot in other areas.
+          </p>
+          <p class="pt-4">
+            I hope you find something that resonates with you. You’re welcome!
+          </p>
+          <a
+            href="javascript:void(0)"
+            class="btn-see-all btn btn-sm w-100 mt-4 py-3 rounded-0"
+            role="button"
+            >See All Blogs</a
+          >
+        </article>
+      </div>
+      <hr />
+    </section>
+
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        var popoverTriggerList = [].slice.call(
+          document.querySelectorAll('[data-bs-toggle="popover"]')
+        );
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+          return new bootstrap.Popover(popoverTriggerEl);
+        });
+      });
+    </script>
+  </body>
+</html>

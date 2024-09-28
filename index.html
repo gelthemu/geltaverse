@@ -43,7 +43,7 @@
 
       <div class="menu-backdrop fixed-top h-100" id="menu-backdrop"></div>
 
-      <div class="offcanvas offcanvas-end menu" id="menu" role="dialog">
+      <div class="offcanvas offcanvas-end menu custom-transition" id="menu" role="dialog">
         <div class="offcanvas-header menu-header justify-content-between pe-5">
           <div class="offcanvas-title menu-title">
             <img
@@ -68,7 +68,9 @@
               <a href="javascript:void(0)" class="nav-link">Projects</a>
             </li>
             <li class="nav-item">
-              <a href="javascript:void(0)" class="nav-link mgbd-link mt-3 pt-3"
+              <a
+                href="javascript:void(0)"
+                class="nav-link blog-btn mgbd-link mt-3 pt-3"
                 >Blog</a
               >
             </li>
@@ -94,7 +96,7 @@
           </p>
           <p class="mt-4">
             As soon as this site goes live, I hope to start writing
-            <a href="javascript:void(0)" class="hero-link pb-1">weblog</a>
+            <a href="javascript:void(0)" class="hero-link blog-btn pb-1">weblog</a>
             posts.
           </p>
           <p class="mt-4">
@@ -235,6 +237,27 @@
       </div>
     </section>
 
+    <section
+      id="blog-modal"
+      class="blog-modal position-fixed w-100 h-100 top-0 start-0"
+    >
+      <div
+        class="blog-content position-relative border border-4 border-top-0 mx-auto p-0"
+      >
+        <iframe
+          class="blog-iframe"
+          src="resources/docs/blog.html"
+          frameborder="0"
+        ></iframe>
+        <div
+          type="button"
+          class="blog-close position-absolute top-0 end-0 px-3 py-2"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+    </section>
+
     <section class="media-player me-2 mb-2" style="width: 280px">
       <div
         class="d-flex flex-column justify-content-center align-items-end gap-1"
@@ -251,7 +274,7 @@
           </audio>
         </div>
         <div
-          class="scrollTop border border-2"
+          class="scrollTop custom-transition border border-2"
           style="width: 26px; height: 24px"
         >
           <i class="fa-solid fa-chevron-up"></i>
@@ -276,7 +299,7 @@
             class="d-flex flex-wrap justify-content-between align-items-center"
           >
             <div
-              class="footer-tab d-flex align-items-center px-3 py-1"
+              class="footer-tab blog-btn d-flex align-items-center px-3 py-1"
               type="button"
             >
               <a href="javascript:void(0)">Blog</a>

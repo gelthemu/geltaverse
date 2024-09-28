@@ -43,6 +43,11 @@ body {
   color: var(--mg-dark-gray);
 }
 
+.bold-text {
+  font-weight: 400;
+  color: var(--mg-dark-gray);
+}
+
 a {
   color: var(--mg-light);
   text-decoration: none;
@@ -80,4 +85,21 @@ button {
   cursor: pointer;
   border-radius: 10px;
   transition: all 0.5s ease-in-out;
+}
+
+.custom-popover {
+  --bs-popover-border-color: transparent;
+  --bs-popover-bg: var(--mg-complementary) !important;
+  --bs-popover-body-color: var(--mg-light) !important;
+  --bs-popover-body-padding-x: 1em;
+  --bs-popover-body-padding-y: 0.25em;
+}
+
+.custom-transition {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
